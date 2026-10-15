@@ -1,0 +1,32 @@
+<div class="container">
+  <h2 class="titre">Modifier un Avion :</h2>
+  <form (ngSubmit)="updateAvion()">
+    <div class="mb-2">
+      <label>ID Avion</label>
+      <input type="number" class="form-control champ-court" name="idAvion" [(ngModel)]="currentAvion.idAvion" readonly required>
+    </div>
+    <div class="mb-2">
+      <label>Modele Avion</label>
+      <input type="text" class="form-control champ" name="modele" [(ngModel)]="currentAvion.modele" required>
+    </div>
+    <div class="mb-2">
+      <label>Capacite Avion</label>
+      <input type="number" class="form-control champ-court" name="capacite" [(ngModel)]="currentAvion.capacite" required>
+    </div>
+    <div class="mb-2">
+      <label>Date mise en service</label>
+      <input type="date" class="form-control champ" name="dateMiseEnService"
+             [ngModel]="currentAvion.dateMiseEnService | date:'yyyy-MM-dd'"
+             (ngModelChange)="currentAvion.dateMiseEnService = $event" required>
+    </div>
+    <div class="mb-3">
+      <label>Compagnie</label>
+      <select class="form-control form-control-lg champ" id="idComp" name="idComp" [(ngModel)]="updatedCompId">
+        @for(comp of compagnies; track comp.idComp){
+          <option [value]="comp.idComp"> {{comp.nomComp}} </option>
+        }
+      </select>
+    </div>
+    <button type="submit" class="btn btn-success btn-sm">Modifier</button>
+  </form>
+</div>

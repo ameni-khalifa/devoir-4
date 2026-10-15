@@ -1,0 +1,30 @@
+<div class="container">
+  <h2 class="titre">Ajouter un Avion :</h2>
+  <form (ngSubmit)="addAvion()">
+    <div class="mb-2">
+      <label>ID Avion</label>
+      <input type="number" class="form-control champ-court" name="idAvion" [(ngModel)]="newAvion.idAvion" required>
+    </div>
+    <div class="mb-2">
+      <label>Modele Avion</label>
+      <input type="text" class="form-control champ" name="modele" [(ngModel)]="newAvion.modele" required>
+    </div>
+    <div class="mb-2">
+      <label>Capacite Avion</label>
+      <input type="number" class="form-control champ-court" name="capacite" [(ngModel)]="newAvion.capacite" required>
+    </div>
+    <div class="mb-2">
+      <label>Date mise en service</label>
+      <input type="date" class="form-control champ" name="dateMiseEnService" [(ngModel)]="newAvion.dateMiseEnService" required>
+    </div>
+    <div class="mb-3">
+      <label>Compagnie</label>
+      <select class="form-control form-control-lg champ" id="idComp" name="idComp" [(ngModel)]="newIdComp">
+        @for(comp of compagnies; track comp.idComp){
+          <option [value]="comp.idComp"> {{comp.nomComp}} </option>
+        }
+      </select>
+    </div>
+    <button type="submit" class="btn btn-success btn-sm">Ajouter</button>
+  </form>
+</div>

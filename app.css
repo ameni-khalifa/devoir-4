@@ -1,0 +1,26 @@
+nav.navbar {
+  margin-bottom: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 0.8rem;
+}
+
+.navbar-brand {
+  font-size: 0.85rem;
+}
+
+.nav-link {
+  cursor: pointer;
+  padding: 4px 6px;
+  color: #555;
+}
+
+.dropdown-menu {
+  margin-top: 0;
+  font-size: 0.8rem;
+}
+
+.navbar-text.dropdown-toggle {
+  font-size: 0.7rem;
+  padding: 0;
+}

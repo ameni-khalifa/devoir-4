@@ -1,0 +1,25 @@
+.titre {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+label {
+  font-size: 0.7rem;
+  margin-bottom: 1px;
+  display: block;
+}
+
+.champ {
+  width: 230px;
+  font-size: 0.7rem;
+}
+
+.champ-court {
+  width: 120px;
+  font-size: 0.7rem;
+}
+
+select.champ {
+  font-size: 0.9rem;
+}
